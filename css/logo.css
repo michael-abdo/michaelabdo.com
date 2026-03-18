@@ -1,0 +1,31 @@
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    display: flex;
+    align-items: center;
+    color: var(--primary-color);
+}
+
+.logo-img {
+    height: 36px;
+    width: auto;
+    margin-right: 10px;
+    transition: all 0.3s ease;
+}
+
+.logo:hover .logo-img {
+    transform: scale(1.1);
+}
+
+.footer-logo.logo {
+    color: var(--background-color);
+}
+
+.footer-logo-img {
+    filter: brightness(0) invert(1); /* Convert to white for footer */
+}
+
+.footer-logo.logo:hover .logo-img {
+    filter: brightness(0) invert(0.8); /* Slightly dimmed white on hover */
+}
