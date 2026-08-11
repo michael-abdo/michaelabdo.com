@@ -150,5 +150,19 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div id="panel-overlay" class="panel-overlay"></div>
 
     <script src="script.js?v=20250526"></script>
+    <!-- First-party page-view beacon -->
+    <script>
+    (function () {
+      try {
+        var q = new URLSearchParams(location.search);
+        var src = q.get('src') || q.get('utm_source') || '';
+        (new Image(1, 1)).src = 'https://apply.michaelabdo.com/t.gif'
+          + '?p=' + encodeURIComponent(location.pathname)
+          + '&r=' + encodeURIComponent(document.referrer || '')
+          + '&s=' + encodeURIComponent(src)
+          + '&cb=' + Date.now();
+      } catch (e) { /* analytics must never break the page */ }
+    })();
+    </script>
 </body>
 </html>
